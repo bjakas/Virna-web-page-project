@@ -1,0 +1,969 @@
+@import "./base/reset";
+@import "./base/colors";
+@import "./abstracts/mixins";
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bellefair&family=Cinzel:wght@400;700;900&family=Finger+Paint&display=swap');
+@import "./base/fonts";
+
+@keyframes header-animation {
+  from {
+      transform: translateX(200px);
+      opacity: 0;
+  }
+  to {
+      transform: translateX(0px);
+      opacity: 1;
+  }
+}
+
+html {
+  font-size: 16px; /* While em is relative to the font-size of its direct or nearest parent, rem is only relative to the html (root) font-size. 1 rem = 16px */
+}
+
+
+
+/* HOME page */
+
+.hero {
+  height: 100vh;
+  width: auto;
+  background-color: $primary-color-dark;
+  color: $primary-color-white;
+  font-size: 2.5rem;
+  background-image: url(./images/Home-image.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 0%;
+  background-attachment: scroll;
+  background-size: cover;
+}
+
+.logo {
+  margin: 2.5rem;
+  font-family: $logo-font;
+  font-size: 2.25rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.logo-white:hover {
+  color: $primary-color-dark;
+}
+
+.hero-area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: right;
+}
+
+.hero-text {
+  animation: header-animation 1s ease-in-out 1.5s 1 normal forwards;
+  opacity: 0;
+  text-align: left;
+  margin-left: 60%;
+  margin-top: 13%;
+  width: 30%;
+  color: $slide-odd-color;
+  font-family: $hero-section-text;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 4.3125rem;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+footer {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  background-color: $primary-color-white;
+  width: 100%;
+}
+
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.brand-youtube, .brand-facebook, .brand-email {
+  align-self: center;
+  font-size: 2.25rem;
+}
+
+.brand-youtube:hover, .brand-facebook:hover, .brand-email:hover  {
+  transition: ease-in-out 0.5s;
+  transform: scale(1.2, 1.2);
+}
+
+.brand-youtube:hover {
+  color: $youtube-color;
+}
+
+.brand-facebook:hover {
+  color: $facebook-color;
+}
+
+.brand-email:hover {
+  color: $email-color;
+}
+
+.brands-and-copyright {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: space-evenly;
+}
+
+.copyright {
+  align-self: center;
+  font-family: 'Bellefair', serif;
+  font-size: 1rem;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+
+ul {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style-type: none;
+  width: 500px;
+  justify-content: space-around;
+  font-size: 1.875rem;
+  margin: 40px;
+}
+
+ul.show {
+  display: block;
+}
+
+li {
+  text-decoration: none;
+  font-family: 'Bellefair', serif;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: $primary-color-dark;
+}
+
+.a-white {
+  color: $primary-color-white;
+}
+
+.a-black:hover {
+  color: $hover-color;
+}
+
+.li-white:hover {
+  color: $primary-color-dark;
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburger:focus {
+  outline: 0;
+}
+
+
+/* ABOUT page */
+
+.logo-black:hover {
+  color: $hover-color;
+}
+
+.hero-about {
+  width: 100vw;
+  height: auto;
+  background-color: $primary-color-white;
+  color: $primary-color-dark;
+  font-size: 2.5rem;
+}
+
+.about-section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: auto;
+  margin: 0px 300px 0px 300px;
+}
+
+.about-image {
+  max-width: 100%;
+  height: auto;
+  margin: 0px 0px 30px 0px;
+  padding: 0px;
+}
+
+.about-text {
+  line-height: 23.5px;
+  text-align: justify;
+  color: $primary-color-dark; 
+}
+
+.page-header-text {
+  text-align: left;
+  margin-bottom: 30px;
+  font-family: $page-header-font;
+  font-size: 2.25rem;
+  color: $primary-color-dark; 
+}
+
+.bio-text {
+  font-family: $basic-text-font;
+  font-style: normal;
+  font-size: 1.1875rem;
+}
+
+#slider {
+  position: relative;
+  width: 40%;
+  height: 30vw;
+  margin: 50px auto;
+  perspective: 1400px;
+  transform-style: preserve-3d;
+}
+
+input[type=radio] {
+  display: inline;
+  position: relative;
+  top: -10%;
+  left: 40%;
+  width: 18px;
+  height: 18px;
+  margin: 0 15px 0 0;
+  opacity: 0.4;
+  transform: translateX(-83px);
+  cursor: pointer;
+  padding-bottom: 50px;
+}
+
+input[type=radio]:checked {
+  opacity: 1;
+}
+
+#slider label {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 400ms ease;
+}
+
+iframe{
+  width: 75%;
+  height: 70%;
+  border-radius: 5px;
+}
+
+#slide1 {
+  background: $slide-odd-color;
+  border-radius: 5px;
+}
+
+#slide2 {
+  background: $slide-even-color;
+  border-radius: 5px;
+}
+
+#slide3 {
+  background: $slide-odd-color;
+  border-radius: 5px;
+}
+
+#slide4 {
+  background: $slide-even-color;
+  border-radius: 5px;
+}
+
+#slide5 {
+  background: $slide-odd-color;
+  border-radius: 5px;
+}
+#slide6 {
+  background: $slide-even-color;
+  border-radius: 5px;
+}
+#slide7 {
+  background: $slide-odd-color;
+  border-radius: 5px;
+}
+#slide8 {
+  background: $slide-even-color;
+  border-radius: 5px;
+}
+
+/* Slider Functionality */
+
+/* Next Slide */
+#s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide6, #s6:checked ~ #slide7, #s7:checked ~ #slide8, #s8:checked ~ #slide1 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(15%, 0, -100px);
+}
+
+
+/* Next to Next Slide */
+#s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide6, #s5:checked ~ #slide7, #s6:checked ~ #slide8, #s7:checked ~ #slide1, #s8:checked ~ #slide2   {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(30%, 0, -250px);
+}
+
+/* Next to Next to Next Slide */
+#s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide6, #s4:checked ~ #slide7, #s5:checked ~ #slide8, #s6:checked ~ #slide1, #s7:checked ~ #slide2, #s8:checked ~ #slide3   {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(45%, 0, -400px);
+}
+
+/* Next to Next to Next to Next Slide */
+#s1:checked ~ #slide5, #s2:checked ~ #slide6, #s3:checked ~ #slide7, #s4:checked ~ #slide8, #s5:checked ~ #slide1, #s6:checked ~ #slide2, #s7:checked ~ #slide3, #s8:checked ~ #slide4   {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(60%, 0, -750px); /* hidden; if not we would have 4 on one side instead of 3 */
+}
+
+/* Active Slide */
+#s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5, #s6:checked ~ #slide6, #s7:checked ~ #slide7, #s8:checked ~ #slide8    {
+  box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+  transform: translate3d(0%, 0, 0px);
+}
+
+/* Previous to Previous to Previous to Previous Slide - if additions */ 
+/* #s1:checked ~ #slide5, #s2:checked ~ #slide6, #s3:checked ~ #slide7, #s4:checked ~ #slide8, #s5:checked ~ #slide1, #s6:checked ~ #slide2, #s7:checked ~ #slide3, #s8:checked ~ #slide4  {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(-60%, 0, -550px);
+} */
+
+/* Previous to Previous to Previous Slide */
+#s1:checked ~ #slide6, #s2:checked ~ #slide7, #s3:checked ~ #slide8, #s4:checked ~ #slide1, #s5:checked ~ #slide2, #s6:checked ~ #slide3, #s7:checked ~ #slide4, #s8:checked ~ #slide5  {
+  box-shadow: 0 2px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(-45%, 0, -400px);
+}
+
+/* Previous to Previous Slide */
+#s1:checked ~ #slide7, #s2:checked ~ #slide8, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3, #s6:checked ~ #slide4, #s7:checked ~ #slide5, #s8:checked ~ #slide6 {
+  box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+  transform: translate3d(-30%, 0, -250px);
+}
+
+/* Previous Slide */
+#s1:checked ~ #slide8, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4, #s6:checked ~ #slide5, #s7:checked ~ #slide6, #s8:checked ~ #slide7 {
+  box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+  transform: translate3d(-15%, 0, -100px);
+}
+
+
+/* CONCERTS page */
+
+.hero-concerts {
+  height: 100%;
+  width: auto;
+  background-image: url(./images/About-image-2.jpg);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-attachment: scroll;
+  background-size: cover;
+  background-color: $primary-color-dark;
+  color: $primary-color-white;
+}
+
+.concerts-section {
+  padding-left: 40px;
+  padding-right: 60px;
+}
+
+.upcoming-concerts-header {
+  text-align: left;
+  font-family: $page-header-font;
+  font-size: 2rem;
+  color: $primary-color-white;
+  text-align: right;
+}
+
+.concerts-container {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: left;
+}
+
+.upcoming-concerts-text {
+  font-family: $basic-text-font;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  font-size: 1.1875rem;
+  font-weight: bold;
+  line-height: 1.52625rem;
+  text-align: right;
+}
+
+.info-button{
+  @include basic-btn;
+  width: 100%;
+  color: white;
+  border-color: #f5a98b;
+}
+
+.info-button:hover {
+  @include basic-btn-hover;
+  color: #f5a98b;
+  border-color: white;
+}
+
+
+/* CONTACT page */
+
+.hero-contact {
+  height: 100%;
+  width: auto;
+  background-image: url(./images/Contact-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: scroll;
+  background-size: cover;
+  background-color: $primary-color-dark;
+  color: $primary-color-white;
+}
+
+.contact-section {
+  font-family: $basic-text-font;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.contact-area {
+  font-size: 1.1875rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding-bottom: 5%;
+  padding-right: 20%;
+}
+
+.contact-header {
+  margin-bottom: 40px;
+  color: $slide-odd-color;
+}
+
+input {
+  margin: 15px 0px 30px 0px;
+  width: 300px;
+  @include input-textarea;
+}
+
+input:focus {
+  @include input-textarea-focus;
+}
+
+// Style to avoid autofill color 
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.input-field.input-field--material {
+  position: relative;
+  padding-bottom: 10px;
+}
+.input-field.input-field--material label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 5;
+  transform: translateY(50%);
+  color: $slide-odd-color;
+  transition: font-size 0.3s ease, transform 0.3s ease;
+}
+.input-field.input-field--material input {
+  display: block;
+  width: 90%;
+  border-bottom: 3px solid $slide-odd-color;
+}
+.input-field.input-field--material input::placeholder {
+  opacity: 0;
+}
+.input-field.input-field--material textarea::placeholder {
+  opacity: 0;
+}
+.input-field.input-field--material input:focus {
+  border-color: $slide-even-color;
+}
+.input-field.input-field--material textarea:focus {
+  border-color: $slide-even-color;
+}
+.input-field.input-field--material input:focus + label,
+.input-field.input-field--material input:not(:placeholder-shown) + label{
+  font-size: 1rem;
+  transform: translateY(-100%);
+  color: $slide-even-color;
+}
+
+.input-field.input-field--material textarea:focus + label,
+.input-field.input-field--material textarea:not(:placeholder-shown) + label{
+  font-size: 1rem;
+  transform: translateY(-100%);
+  color: $slide-even-color;
+}
+
+textarea {
+  width: 90%;
+  height: 15%;
+  resize: vertical;
+  @include input-textarea;
+}
+
+textarea:focus {
+  @include input-textarea-focus;
+}
+
+input, textarea {
+  font-family:inherit;
+  font-size: inherit;
+}
+
+// input:hover, textarea:hover {
+//   background-color: #f7f2f2;
+// }
+
+.contact-button {
+  @include basic-btn;
+  width: 50%;
+}
+
+.contact-button:hover {
+  @include basic-btn-hover;
+}
+
+/* media guery */
+
+@media screen and (max-width: 688px){ /* vidjeti još za width da funkcionira i kad se mob okrene */
+
+  .hero {
+    height: 100%;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-attachment: scroll;
+    background-size: cover;
+  }
+  .hero-area {
+    height: 400px;
+  }
+  .hero-text {
+    margin-left: 60%;
+    margin-top: 22%;
+  }
+  
+  h1 {
+    font-size: 23px;
+    margin-bottom: 0px;
+  }
+  
+  h2 {
+    font-size: 18px;
+  }
+
+  .logo {
+    margin: 20px;
+    font-size: 26px;
+  }
+
+  .about-section {
+    flex-wrap: wrap;
+    margin: 0px 30px 0px 30px;
+  }    
+
+  ul {
+    display: none;
+    margin: 0px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 22px;
+  }
+
+  ul.show {
+    display: block;
+  }
+
+  nav ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    margin-left: 60%;
+  }
+
+  .centered-li {
+    margin-left: 37%;
+  }
+
+  footer {
+    margin: 30px 50px 30px 50px;
+    width: auto;
+   
+  }
+
+  .brands-and-copyright {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .brands {
+  flex-flow: column wrap;
+  align-items: center;
+  }
+  
+  .copyright {
+    font-size: 14px;
+    margin-top: 30px;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: block;
+    border: 0;
+    background-color: transparent;
+    color: $primary-color-white;
+    font-size: 30px;
+    margin: 20px;
+    align-self: flex-start;
+  }
+
+  .hamburger:hover {
+    color: $primary-color-dark;
+  } 
+
+  .black {
+    color: $primary-color-dark;
+  }
+  .black:hover {
+    color: $hover-color;
+  }
+
+  .about-image {
+    margin: 0px 0px 30px 0px;
+    max-width: 70%;
+    height: auto;
+  }
+  
+  .about-text {
+    line-height: 23.5px;
+    text-align: justify;
+    padding: 0px 50px 0px 50px;
+  }
+  
+  .page-header-text {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 21px;
+  }
+  
+  .bio-text {
+    font-size: 14px;
+  }
+
+  #slider {
+    width: 50%;
+    height: 35vw;
+    margin: 100px auto;
+  }
+  
+  input[type=radio] {
+    top: -20%;
+    left: 55%;
+    width: 12px;
+    height: 12px;
+    margin: 0 3px 0 0;
+  }
+
+  #slider label {
+    width: 100%;
+    height: 100%;
+  }
+  
+  iframe{
+    width: 85%;
+    height: 80%;
+  }
+  
+  .hero-concerts {
+    background-position: 40% 50%;
+  }
+
+  .concerts-section {
+    padding-right: 20px;
+  }
+  
+  .upcoming-concerts-header {
+    text-align: right;
+    font-size: 21px;
+  }
+  
+  .upcoming-concerts-text {
+    text-align: right;
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .hero-contact {
+    background-position: 35% 10%;
+  }
+  
+  .contact-section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .contact-area {
+    padding-right: 0%;
+  }
+
+
+  label p {
+    font-size: 14px;
+  }
+
+  form {
+    padding-left: 5%;
+    width: 70%;
+  }
+
+  .contact-button {
+    width: 70%;
+  }
+
+}
+
+/* tablets */
+
+@media only screen and (max-width: 992px) and (min-width: 689px)  {
+body {
+  background-color: red;
+}
+
+.hero {
+  background-position: 90% 50%;
+}
+
+.hero-text {
+  margin-left: 60%;
+  margin-top: 25%;
+}
+
+h1 {
+  font-size: 38px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+.logo {
+  margin: 20px;
+  font-size: 30px;
+}
+
+.about-section {
+  flex-wrap: wrap;
+  margin: 0px 30px 0px 30px;
+}   
+
+ul {
+  width: 450px;
+  font-size: 28px;
+  margin: 20px;
+}
+
+/* ul {
+  display: none;
+  margin: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+} */
+
+/* ul.show {
+  display: block;
+}
+
+nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-left: 60%;
+}
+
+.centered-li {
+  margin-left: 37%;
+}
+
+
+.hamburger {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  color: white;
+  font-size: 34px;
+  margin: 20px;
+  align-self: flex-start;
+}
+
+.hamburger:hover {
+  color: black;
+}  */
+
+.black {
+  color: $primary-color-dark;
+}
+.black:hover {
+  color: $hover-color;
+}
+
+.about-image {
+  margin: 0px 0px 30px 0px;
+  max-width: 70%;
+  height: auto;
+}
+
+.about-text {
+  line-height: 23.5px;
+  text-align: justify;
+  padding: 0px 90px 0px 90px;
+}
+
+.page-header-text {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.bio-text {
+  font-size: 18px;
+}
+
+#slider {
+  width: 60%;
+  height: 45vw;
+  margin: 50px auto;
+}
+
+#slider label {
+  width: 90%;
+  height: 90%;
+}
+
+iframe{
+  width: 75%;
+  height: 70%;
+}
+
+input[type=radio] {
+  top: -10%;
+  left: 40%;
+  width: 16px;
+  height: 16px;
+  margin: 0 8px 0 0;
+}
+
+iframe{
+  width: 70%;
+  height: 60%;
+}
+
+.concerts-section {
+  height: 100%;
+  background-position: 25% 10%;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.upcoming-concerts-header {
+  text-align: right;
+  font-size: 24px;
+}
+
+.upcoming-concerts-text {
+  text-align: right;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.contact-section {
+height: 100%;
+}
+
+.contact-area {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.contact-area {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+}
+}
+
+/* laptops - initial css */
+@media only screen and (max-width: 1312px) and (min-width: 993px)  {
+  body {
+    background-color: $primary-color-white;
+  }
+}
+
+/* wide screen */
+
+@media only screen and (min-width: 1313px)  {
+  ul {
+    width: 600px;
+    font-size: 34px;
+  }
+
+  .about-section {
+    margin: 0px 400px 0px 400px;
+  }
+  
+  .about-image {
+    max-width: 100%;
+    height: auto;
+    margin: 0px 0px 30px 0px;
+    padding: 0px;
+  }
+
+  .concerts-section {
+    padding-right: 100px;
+  }
+
+  form {
+    padding: 30px;
+  }
+
+}
+
+

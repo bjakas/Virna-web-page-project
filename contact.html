@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Personal website of a pianist Virna Kljaković.">
+  <meta name="keywords" content="piano, pianist, Virna Kljaković, concerts, classic music, piano lessons">
+  <meta name="author" content="Nathalie">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virna Kljaković - pianist - contact</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <section class="hero-contact">
+    <header>
+      <nav>
+        <a class="a-white" href="./index.html">
+          <div class="logo logo-white">VK</div>
+        </a>
+        <ul id="nav-list">
+          <a class="a-white" href="./index.html">
+            <li class="centered-li li-white">Home</li>
+          </a>
+          <a class="a-white" href="./about.html">
+            <li class="centered-li li-white">About</li>
+          </a>
+          <a class="a-white" href="./media.html">
+            <li class="centered-li li-white">Media</li>
+          </a>
+          <a class="a-white" href="./concerts.html">
+            <li class="centered-li li-white">Concerts</li>
+          </a>
+          <a class="a-white" href="./contact.html">
+            <li class="centered-li li-white">Contact</li>
+          </a>
+        </ul>
+        <button class="hamburger" id="hamburger">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main class="contact-section">
+      <div class="contact-area">
+        <form action="https://formsubmit.co/virna.kljakovic@gmail.com" method="POST">
+          <h2 class="contact-header">CONTACT ME:</h2>
+          <input type="hidden" name="_subject" value="New email from my website!">
+          <input type="text" name="_honey" style="display:none">
+
+          <div class="input-field input-field--material">
+            <input type="text" id="material" name="name" placeholder="Example value" required>
+            <label for="material">Name</label>
+          </div>
+
+          <div class="input-field input-field--material">
+            <input type="email" id="material" name="email" placeholder="janedoe@gmail.com" required>
+            <label for="email">Email</label>
+          </div>
+
+          <div class="input-field input-field--material">
+            <textarea name="message" id="material" name="message" cols="30" rows="6" placeholder="Example value"
+              required></textarea>
+            <label for="message">Your message</label>
+          </div>
+
+          <button class="contact-button info-button" type="submit">SEND MESSAGE</button>
+
+        </form>
+      </div>
+
+    </main>
+  </section>
+
+  <footer>
+
+    <div class="brands-and-copyright">
+
+      <div class="brands">
+        <a class="brand-youtube" target="_blank" href="https://www.youtube.com/channel/UCwtOBho50qxd8TePWZvfzww"><i
+            class="fab fa-youtube"></i></a>
+        <a class="brand-facebook" target="_blank" href="https://www.facebook.com/virna.kljakovic"><i
+            class="fab fa-facebook brand-facebook"></i></a>
+        <a class="brand-email" target="_blank" href="mailto:virna.kljakovic@gmail.com"><i
+            class="far fa-envelope"></i></a>
+      </div>
+
+      <h3 class="copyright">© Copyright
+        <span data-year></span> VK / Made by Nathalie
+      </h3>
+    </div>
+
+  </footer>
+
+  <script src="./js/scripts.js"></script>
+
+</body>
+
+</html>

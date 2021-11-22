@@ -1,0 +1,35 @@
+@mixin basic-btn {
+  font-family: $basic-text-font;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: transparent;
+  color: $slide-odd-color;
+  border: 3px solid $slide-odd-color;
+  cursor: pointer;
+}
+
+@mixin basic-btn-hover {
+  background-color: transparent;
+  color: $slide-even-color;
+}
+
+@mixin input-textarea {
+  display: block; /* Bring each text input onto a new line */
+  padding: 10px 10px 0px 0px;
+  border-bottom: 3px solid $slide-odd-color;
+  background-color: transparent;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  color: $slide-odd-color;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@mixin input-textarea-focus  {
+  border-bottom: 3px solid $slide-odd-color;
+  color: $slide-odd-color;
+}
