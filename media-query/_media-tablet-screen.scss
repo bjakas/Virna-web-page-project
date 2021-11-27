@@ -1,0 +1,194 @@
+// tablet screen
+
+@media only screen and (max-width: 992px) and (min-width: 813px) {
+
+  // 689 or 813
+
+  // HOME page
+
+.hero {
+  // transition: 0.5s ease-in;
+  background-position: 70% 50%;
+}
+
+.hero-text {
+  // margin-left: 60%; same as on laptops
+  margin-top: 30%;
+}
+
+h1 {
+  font-size: 2.375rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.logo {
+  margin: 20px;
+  font-size: 1.875rem;
+}
+
+ul {
+  display: none;
+  margin: 0px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1.375rem;
+}
+
+ul.show {
+  display: block;
+}
+
+nav ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  margin-left: 60%;
+}
+
+.centered-li {
+  margin-left: 37%;
+}
+
+.hamburger {
+  display: block;
+  border: 0;
+  background-color: transparent;
+  color: $primary-color-white;
+  font-size: 1.875rem;
+  margin: 20px;
+  align-self: flex-start;
+}
+
+.hamburger:hover {
+  color: $primary-color-dark;
+} 
+
+.black {
+  color: $primary-color-dark;
+}
+.black:hover {
+  color: $hover-color;
+}
+
+// ABOUT page
+
+.about-section {
+  flex-wrap: wrap;
+  margin: 0px 80px 0px 80px;
+}   
+
+.black {
+  color: $primary-color-dark;
+}
+.black:hover {
+  color: $hover-color;
+}
+
+.about-image {
+  max-width: 70%;
+  padding: 0px;
+}
+
+.about-text {
+  padding: 0px 70px 0px 70px;
+}
+
+.page-header-text {
+  margin-top: 30px;
+  font-size: 1.5rem;
+}
+
+.bio-text {
+  font-size: 1.125rem;
+}
+
+// MEDIA page
+
+.hero-media {
+  height: 100%;
+}
+
+#slider {
+  display: none;
+  visibility: hidden;
+}
+
+.hidden-desktop {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 50px 0px;
+}
+
+iframe{
+  width: 380px;
+  height: 320px;
+}
+
+// #slider label {
+//   width: 90%;
+//   height: 90%;
+// }
+
+// iframe{
+//   width: 75%;
+//   height: 70%;
+// }
+
+// input[type=radio] {
+//   top: -15%;
+//   left: 35%;
+//   width: 16px;
+//   height: 16px;
+//   margin: 0 8px 0 0;
+// }
+
+input[type=radio] {
+  visibility: hidden;
+  display: none;
+}
+
+
+// CONCERTS page
+
+.concerts-section {
+  height: 100%;
+  background-position: 25% 10%;
+  padding-left: 20px;
+  padding-right: 40px;
+}
+
+.upcoming-concerts-header {
+  font-size: 1.5rem;
+}
+
+.upcoming-concerts-text {
+  text-align: right;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+
+// CONTACT page
+
+.contact-section {
+  height: 100%;
+}
+
+.contact-area {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 30px;
+}
+
+form {
+  padding-top: 40px;
+}
+
+}

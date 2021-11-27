@@ -23,21 +23,11 @@
           <div class="logo logo-white">VK</div>
         </a>
         <ul id="nav-list">
-          <a class="a-white" href="./index.html">
-            <li class="centered-li li-white">Home</li>
-          </a>
-          <a class="a-white" href="./about.html">
-            <li class="centered-li li-white">About</li>
-          </a>
-          <a class="a-white" href="./media.html">
-            <li class="centered-li li-white">Media</li>
-          </a>
-          <a class="a-white" href="./concerts.html">
-            <li class="centered-li li-white">Concerts</li>
-          </a>
-          <a class="a-white" href="./contact.html">
-            <li class="centered-li li-white">Contact</li>
-          </a>
+          <li class="centered-li"><a class="a-white" href="./index.html">Home</a></li>
+          <li class="centered-li"><a class="a-white" href="./about.html">About</a></li>
+          <li class="centered-li"><a class="a-white" href="./media.html">Media</a></li>
+          <li class="centered-li"><a class="a-white" href="./concerts.html">Concerts</a></li>
+          <li class="centered-li"><a class="a-white" href="./contact.html">Contact</a></li>
         </ul>
         <button class="hamburger" id="hamburger">
           <i class="fas fa-bars"></i>
@@ -45,16 +35,16 @@
       </nav>
     </header>
 
-    <main class="contact-section">
+    <section class="contact-section">
       <div class="contact-area">
-        <form action="https://formsubmit.co/virna.kljakovic@gmail.com" method="POST">
+        <form target="_blank" action="https://formsubmit.co/virna.kljakovic@gmail.com" method="POST">
           <h2 class="contact-header">CONTACT ME:</h2>
           <input type="hidden" name="_subject" value="New email from my website!">
           <input type="text" name="_honey" style="display:none">
 
           <div class="input-field input-field--material">
             <input type="text" id="material" name="name" placeholder="Example value" required>
-            <label for="material">Name</label>
+            <label for="name">Name</label>
           </div>
 
           <div class="input-field input-field--material">
@@ -63,8 +53,7 @@
           </div>
 
           <div class="input-field input-field--material">
-            <textarea name="message" id="material" name="message" cols="30" rows="6" placeholder="Example value"
-              required></textarea>
+            <textarea id="material" name="message" cols="30" rows="6" placeholder="Example value" required></textarea>
             <label for="message">Your message</label>
           </div>
 
@@ -73,7 +62,7 @@
         </form>
       </div>
 
-    </main>
+    </section>
   </section>
 
   <footer>

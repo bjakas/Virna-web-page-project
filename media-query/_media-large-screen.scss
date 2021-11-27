@@ -1,0 +1,197 @@
+// large screen
+
+@media only screen and (min-width: 1313px)  {
+  ul {
+    width: 600px;
+    font-size: 2.125rem;
+  }
+
+  .page-header-text {
+    margin-top: 50px;
+  }
+
+  .about-section {
+    margin: 0px 500px 0px 500px;
+  }
+
+  .about-image {
+    max-width: 100%;
+  }
+
+  #slider {
+    position: relative;
+    width: 40%;
+    height: 30vw;
+    margin: 100px auto;
+    perspective: 1400px;
+    transform-style: preserve-3d;
+  }
+  
+  input[type=radio] {
+    display: inline;
+    position: relative;
+    top: -15%;
+    left: 35%;
+    width: 18px;
+    height: 18px;
+    margin: 0 15px 0 0;
+    opacity: 0.4;
+    transform: translateX(-83px);
+    cursor: pointer;
+    padding-bottom: 50px;
+  }
+  
+  input[type=radio]:checked {
+    opacity: 1;
+  }
+  
+  #slider label {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 400ms ease;
+  }
+  
+  iframe{
+    width: 75%;
+    height: 70%;
+    border-radius: 5px;
+  }
+  
+  #slide1 {
+    background: $slide-odd-color;
+    border-radius: 5px;
+  }
+  
+  #slide2 {
+    background: $slide-even-color;
+    border-radius: 5px;
+  }
+  
+  #slide3 {
+    background: $slide-odd-color;
+    border-radius: 5px;
+  }
+  
+  #slide4 {
+    background: $slide-even-color;
+    border-radius: 5px;
+  }
+  
+  #slide5 {
+    background: $slide-odd-color;
+    border-radius: 5px;
+  }
+  #slide6 {
+    background: $slide-even-color;
+    border-radius: 5px;
+  }
+  #slide7 {
+    background: $slide-odd-color;
+    border-radius: 5px;
+  }
+  #slide8 {
+    background: $slide-even-color;
+    border-radius: 5px;
+  }
+  
+  /* Slider Functionality */
+  
+  /* Next Slide */
+  #s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide4, #s4:checked ~ #slide5, #s5:checked ~ #slide6, #s6:checked ~ #slide7, #s7:checked ~ #slide8, #s8:checked ~ #slide1 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(15%, 0, -100px);
+  }
+  
+  
+  /* Next to Next Slide */
+  #s1:checked ~ #slide3, #s2:checked ~ #slide4, #s3:checked ~ #slide5, #s4:checked ~ #slide6, #s5:checked ~ #slide7, #s6:checked ~ #slide8, #s7:checked ~ #slide1, #s8:checked ~ #slide2   {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(30%, 0, -250px);
+  }
+  
+  /* Next to Next to Next Slide */
+  #s1:checked ~ #slide4, #s2:checked ~ #slide5, #s3:checked ~ #slide6, #s4:checked ~ #slide7, #s5:checked ~ #slide8, #s6:checked ~ #slide1, #s7:checked ~ #slide2, #s8:checked ~ #slide3   {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(45%, 0, -400px);
+  }
+  
+  /* Next to Next to Next to Next Slide */
+  #s1:checked ~ #slide5, #s2:checked ~ #slide6, #s3:checked ~ #slide7, #s4:checked ~ #slide8, #s5:checked ~ #slide1, #s6:checked ~ #slide2, #s7:checked ~ #slide3, #s8:checked ~ #slide4   {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(60%, 0, -750px); /* hidden; if not we would have 4 on one side instead of 3 */
+  }
+  
+  /* Active Slide */
+  #s1:checked ~ #slide1, #s2:checked ~ #slide2, #s3:checked ~ #slide3, #s4:checked ~ #slide4, #s5:checked ~ #slide5, #s6:checked ~ #slide6, #s7:checked ~ #slide7, #s8:checked ~ #slide8    {
+    box-shadow: 0 13px 26px rgba(0,0,0, 0.3), 0 12px 6px rgba(0,0,0, 0.2);
+    transform: translate3d(0%, 0, 0px);
+  }
+  
+  /* Previous to Previous to Previous to Previous Slide - if additions */ 
+  /* #s1:checked ~ #slide5, #s2:checked ~ #slide6, #s3:checked ~ #slide7, #s4:checked ~ #slide8, #s5:checked ~ #slide1, #s6:checked ~ #slide2, #s7:checked ~ #slide3, #s8:checked ~ #slide4  {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-60%, 0, -550px);
+  } */
+  
+  /* Previous to Previous to Previous Slide */
+  #s1:checked ~ #slide6, #s2:checked ~ #slide7, #s3:checked ~ #slide8, #s4:checked ~ #slide1, #s5:checked ~ #slide2, #s6:checked ~ #slide3, #s7:checked ~ #slide4, #s8:checked ~ #slide5  {
+    box-shadow: 0 2px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-45%, 0, -400px);
+  }
+  
+  /* Previous to Previous Slide */
+  #s1:checked ~ #slide7, #s2:checked ~ #slide8, #s3:checked ~ #slide1, #s4:checked ~ #slide2, #s5:checked ~ #slide3, #s6:checked ~ #slide4, #s7:checked ~ #slide5, #s8:checked ~ #slide6 {
+    box-shadow: 0 1px 4px rgba(0,0,0, 0.4);
+    transform: translate3d(-30%, 0, -250px);
+  }
+  
+  /* Previous Slide */
+  #s1:checked ~ #slide8, #s2:checked ~ #slide1, #s3:checked ~ #slide2, #s4:checked ~ #slide3, #s5:checked ~ #slide4, #s6:checked ~ #slide5, #s7:checked ~ #slide6, #s8:checked ~ #slide7 {
+    box-shadow: 0 6px 10px rgba(0,0,0, 0.3), 0 2px 2px rgba(0,0,0, 0.2);
+    transform: translate3d(-15%, 0, -100px);
+  }
+
+  .hidden-desktop {
+    visibility: hidden;
+    display: none;
+  }
+
+  .concerts-section {
+    padding-right: 100px;
+  }
+
+  .upcoming-concerts-header {
+    margin-top: 100px;
+  }
+
+  .hero-contact {
+    height: 100vh;
+  }
+
+  .contact-area {
+    padding-right: 260px;
+  }
+
+  form {
+    padding: 30px;
+  }
+
+  .logo {
+    margin-left: 100px;
+  }
+
+  ul {
+    margin-right: 100px;
+  }
+
+  .logo, ul {
+    margin-top: 50px;
+  }
+}
