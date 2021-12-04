@@ -200,7 +200,7 @@ a {
 }
 
 .a-black:hover {
-  color: #f5a98b;
+  color: #f18c63;
 }
 
 .a-white:hover {
@@ -283,7 +283,7 @@ footer {
 
 /* ABOUT page */
 .logo-black:hover {
-  color: #f5a98b;
+  color: #f18c63;
 }
 
 .hero-about {
@@ -422,14 +422,14 @@ footer {
   padding: 10px;
   background-color: transparent;
   color: white;
-  border: 3px solid #f5a98b;
+  border: 3px solid #f18c63;
   cursor: pointer;
   width: 100%;
 }
 
 .info-button:hover {
   background-color: transparent;
-  color: #f5a98b;
+  color: #f18c63;
   border: 3px solid white;
 }
 
@@ -567,11 +567,11 @@ input:-webkit-autofill:focus {
 }
 
 .input-field.input-field--material input:focus {
-  border-color: #f5a98b;
+  border-color: #f18c63;
 }
 
 .input-field.input-field--material textarea:focus {
-  border-color: #f5a98b;
+  border-color: #f18c63;
 }
 
 .input-field.input-field--material input:focus + label,
@@ -579,7 +579,7 @@ input:-webkit-autofill:focus {
   font-size: 1rem;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  color: #f5a98b;
+  color: #f18c63;
 }
 
 .input-field.input-field--material textarea:focus + label,
@@ -587,7 +587,7 @@ input:-webkit-autofill:focus {
   font-size: 1rem;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
-  color: #f5a98b;
+  color: #f18c63;
 }
 
 textarea {
@@ -634,14 +634,14 @@ input, textarea {
   padding: 10px;
   background-color: transparent;
   color: white;
-  border: 3px solid #f5a98b;
+  border: 3px solid #f18c63;
   cursor: pointer;
   width: 50%;
 }
 
 .contact-button:hover {
   background-color: transparent;
-  color: #f5a98b;
+  color: #f18c63;
   border: 3px solid white;
 }
 
@@ -743,7 +743,7 @@ input, textarea {
     color: black;
   }
   .black:hover {
-    color: #f5a98b;
+    color: #f18c63;
   }
   .about-section {
     -ms-flex-wrap: wrap;
@@ -895,7 +895,7 @@ input, textarea {
     color: black;
   }
   .black:hover {
-    color: #f5a98b;
+    color: #f18c63;
   }
   .about-section {
     -ms-flex-wrap: wrap;
@@ -906,7 +906,7 @@ input, textarea {
     color: black;
   }
   .black:hover {
-    color: #f5a98b;
+    color: #f18c63;
   }
   .about-image {
     max-width: 70%;
@@ -992,7 +992,7 @@ input, textarea {
 }
 
 /* laptops - initial css */
-@media only screen and (max-width: 1312px) and (min-width: 993px) {
+@media only screen and (max-width: 1440px) and (min-width: 993px) {
   body {
     background-color: #dfd9d7;
   }
@@ -1151,7 +1151,7 @@ input, textarea {
 }
 
 /* wide screen */
-@media only screen and (min-width: 1313px) {
+@media only screen and (min-width: 1441px) {
   ul {
     width: 600px;
     font-size: 2.125rem;
@@ -1160,7 +1160,7 @@ input, textarea {
     margin-top: 50px;
   }
   .about-section {
-    margin: 0px 500px 0px 500px;
+    margin: 0px 400px 0px 400px;
   }
   .about-image {
     max-width: 100%;
