@@ -1,17 +1,17 @@
 @import "./base/reset";
 @import "./base/colors";
 @import "./abstracts/mixins";
-@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bellefair&family=Cinzel:wght@400;700;900&family=Finger+Paint&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Bellefair&family=Cinzel:wght@400;700;900&family=Finger+Paint&display=swap");
 @import "./base/fonts";
 
 @keyframes header-animation {
   from {
-      transform: translateX(200px);
-      opacity: 0;
+    transform: translateX(200px);
+    opacity: 0;
   }
   to {
-      transform: translateX(0px);
-      opacity: 1;
+    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
@@ -23,6 +23,73 @@ body {
   background-color: $primary-color-white-darker;
 }
 
+/* cookies */
+
+.wrapper {
+  padding: 32px;
+}
+
+.cookie-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: baseline;
+  position: fixed;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background: #2f3640b9;
+  color: #f5f6fa;
+  padding: 20px 32px;
+  box-shadow: 0 -2px 16px rgba(47, 54, 64, 0.39);
+
+  transition: 400ms;
+}
+
+.cookie-container.active {
+  bottom: 0;
+}
+
+.cookie-container a {
+  color: #f5f6fa;
+}
+
+.cookie-btn {
+  @include basic-btn;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+.cookie-btn:hover {
+  @include basic-btn-hover;
+}
+
+/* Cookie Policy */
+
+.cookie-section {
+  color: $primary-color-dark;
+  padding-bottom: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: justify;
+  height: 100%;
+  width: auto;
+  margin: 0px 250px 0px 250px;
+  font-family: $hero-section-text;
+}
+
+.cookie-h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 0px;
+}
+
+.cookie-text {
+  line-height: 1.46875rem;
+  padding: 5px 0px;
+}
 /* HOME page */
 
 .hero {
@@ -81,7 +148,6 @@ nav {
   justify-content: space-between;
 }
 
-
 ul {
   display: flex;
   flex-wrap: nowrap;
@@ -98,13 +164,17 @@ ul.show {
 
 li {
   text-decoration: none;
-  font-family: 'Bellefair', serif;
+  font-family: "Bellefair", serif;
   cursor: pointer;
 }
 
 a {
   text-decoration: none;
   color: $primary-color-dark;
+}
+
+.a-cookie {
+  text-decoration: underline;
 }
 
 .a-white {
@@ -141,12 +211,16 @@ footer {
   gap: 20px;
 }
 
-.brand-youtube, .brand-facebook, .brand-email {
+.brand-youtube,
+.brand-facebook,
+.brand-email {
   align-self: center;
   font-size: 2.25rem;
 }
 
-.brand-youtube:hover, .brand-facebook:hover, .brand-email:hover  {
+.brand-youtube:hover,
+.brand-facebook:hover,
+.brand-email:hover {
   transition: ease-in-out 0.5s;
   transform: scale(1.2, 1.2);
 }
@@ -171,7 +245,7 @@ footer {
 
 .copyright {
   align-self: center;
-  font-family: 'Bellefair', serif;
+  font-family: "Bellefair", serif;
   font-size: 1rem;
 }
 
@@ -201,7 +275,7 @@ footer {
   align-items: center;
   height: 100%;
   width: auto;
-  margin: 0px 300px 0px 300px;
+  margin: 0px 250px 0px 250px;
 }
 
 .about-image {
@@ -214,7 +288,7 @@ footer {
 .about-text {
   line-height: 1.46875rem;
   text-align: justify;
-  color: $primary-color-dark; 
+  color: $primary-color-dark;
 }
 
 .page-header-text {
@@ -222,7 +296,7 @@ footer {
   margin-bottom: 30px;
   font-family: $page-header-font;
   font-size: 2.25rem;
-  color: $primary-color-dark; 
+  color: $primary-color-dark;
 }
 
 .bio-text {
@@ -244,7 +318,6 @@ footer {
   @include background-static-values;
   padding-bottom: 20px;
 }
-
 
 /* CONCERTS page */
 
@@ -289,7 +362,7 @@ footer {
   text-align: right;
 }
 
-.info-button{
+.info-button {
   @include basic-btn;
   width: 100%;
 }
@@ -344,7 +417,7 @@ input:focus {
   @include input-textarea-focus;
 }
 
-// Style to avoid autofill color 
+// Style to avoid autofill color
 
 input:-webkit-autofill,
 input:-webkit-autofill:focus {
@@ -383,14 +456,14 @@ input:-webkit-autofill:focus {
   border-color: $form-and-button-color;
 }
 .input-field.input-field--material input:focus + label,
-.input-field.input-field--material input:not(:placeholder-shown) + label{
+.input-field.input-field--material input:not(:placeholder-shown) + label {
   font-size: 1rem;
   transform: translateY(-100%);
   color: $form-and-button-color;
 }
 
 .input-field.input-field--material textarea:focus + label,
-.input-field.input-field--material textarea:not(:placeholder-shown) + label{
+.input-field.input-field--material textarea:not(:placeholder-shown) + label {
   font-size: 1rem;
   transform: translateY(-100%);
   color: $form-and-button-color;
@@ -407,16 +480,17 @@ textarea {
 textarea,
 input[type="text"],
 input[type="email"] {
-     -webkit-appearance: none;
-     border-radius: 0;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 textarea:focus {
   @include input-textarea-focus;
 }
 
-input, textarea {
-  font-family:inherit;
+input,
+textarea {
+  font-family: inherit;
   font-size: inherit;
 }
 
@@ -429,13 +503,11 @@ input, textarea {
   @include basic-btn-hover;
 }
 
-
 // media guery
 
 // mobile screen
 
 @import "./media-query/media-mobile-portrait";
-
 
 //  @import "./media-query/media-mobile-landscape"; not working
 

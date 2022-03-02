@@ -1,11 +1,25 @@
 // mobile screen - portrait
 
-
-@media only screen 
-  and (max-device-width: 812px) 
-  { 
-
+@media only screen and (max-device-width: 812px) {
   //688 previously - changed to 812
+
+  .cookie-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    text-align: center;
+  }
+
+  .cookie-btn {
+    margin-top: 20px;
+  }
+
+  // Cookie Policy
+
+  .cookie-section {
+    margin: 0px 30px 0px 30px;
+  }
 
   // HOME page
 
@@ -23,20 +37,20 @@
   .hero-area {
     height: 400px;
   }
-  
+
   .hero-text {
     // margin-left: 60%; // same as on laptops
     margin-top: 22%;
   }
-  
+
   h1 {
     font-size: 1.4375rem;
     margin-bottom: 0px;
   }
-  
+
   h2 {
     font-size: 1.125rem;
-  }  
+  }
 
   ul {
     display: none;
@@ -64,7 +78,6 @@
   footer {
     margin: 30px 50px 30px 50px;
     width: auto;
-   
   }
 
   .brands-and-copyright {
@@ -77,8 +90,8 @@
   .brands {
     flex-flow: column wrap;
     align-items: center;
-    }
-  
+  }
+
   .copyright {
     font-size: 0.875rem;
     margin-top: 30px;
@@ -97,7 +110,7 @@
 
   .hamburger:hover {
     color: $primary-color-dark;
-  } 
+  }
 
   .black {
     color: $primary-color-dark;
@@ -111,23 +124,23 @@
   .about-section {
     flex-wrap: wrap;
     margin: 0px 30px 0px 30px;
-  }  
+  }
 
   .about-image {
     max-width: 70%;
     padding: 0px;
   }
-  
+
   .about-text {
     line-height: 1.46875rem;
     padding: 0px 50px 0px 50px;
   }
-  
+
   .page-header-text {
     margin-top: 30px;
     font-size: 1.3125rem;
   }
-  
+
   .bio-text {
     font-size: 0.875rem;
   }
@@ -142,7 +155,7 @@
     display: none;
     visibility: hidden;
   }
-  
+
   .hidden-desktop {
     display: flex;
     flex-flow: column wrap;
@@ -151,20 +164,19 @@
     gap: 40px;
     margin: 50px 0px;
   }
-  
-  iframe{
+
+  iframe {
     width: 260px;
     height: 200px;
   }
 
-  input[type=radio] {
+  input[type="radio"] {
     visibility: hidden;
     display: none;
   }
-  
 
   // CONCERTS page
-  
+
   .hero-concerts {
     height: 100%;
     background-position: 40% 50%;
@@ -173,12 +185,12 @@
   .concerts-section {
     padding-right: 20px;
   }
-  
+
   .upcoming-concerts-header {
     text-align: right;
     font-size: 1.3125rem;
   }
-  
+
   .upcoming-concerts-text {
     font-size: 0.875rem;
     line-height: 1.5rem;
@@ -189,13 +201,13 @@
   .hero-contact {
     background-position: 35% 10%;
   }
-  
+
   .contact-section {
     padding-top: 80px;
     padding-left: 20px;
     padding-right: 20px;
   }
-  
+
   .contact-area {
     padding-right: 0%;
   }
@@ -212,5 +224,4 @@
   .contact-button {
     width: 70%;
   }
-
 }
